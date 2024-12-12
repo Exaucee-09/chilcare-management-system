@@ -54,12 +54,13 @@ This is a Django-based childcare management system that allows administrators to
     ```bash
     pip install -r requirements.txt
 5.Configure the database
-- Update the DATABASES settings in settings.py to match your PostgreSQL credentials.
+- Update the DATABASES settings in **settings.py** to match your PostgreSQL credentials.
 6. Run migrations
    ```bash
    python manage.py makemigrations
    python manage.py migrate
 7. Run development server
+   ```bash
    python manage.py
 8. Access the app
     ```bash
