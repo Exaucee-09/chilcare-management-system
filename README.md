@@ -6,7 +6,6 @@ This is a Django-based childcare management system that allows administrators to
 ## Features
 
 ### Authentication
-- Admin and guest user login and signup functionality.
 - Authentication is required to access the dashboard.
 
 ### Homepage
@@ -47,23 +46,28 @@ This is a Django-based childcare management system that allows administrators to
    ```bash
    cd childcare-management-system
 3. Create and activate a virtual environment
+    ```bash
     python -m venv venv
     source venv/bin/activate  # For Linux/macOS
     venv\Scripts\activate     # For Windows
 4. Install required packages
+    ```bash
     pip install -r requirements.txt
 5.Configure the database
 - Update the DATABASES settings in settings.py to match your PostgreSQL credentials.
 6. Run migrations
+   ```bash
    python manage.py makemigrations
    python manage.py migrate
 7. Run development server
    python manage.py
 8. Access the app
+    ```bash
    -Visit http://127.0.0.1:8000/ in your web browser.
    -Log in with your admin credentials to manage children, staff, and other records.
 
 ## Future enhancements
+- Multi-users login functionality.
 - Extend the dashboard to integrate more analytics and interactive data visualization.
 - Improve search and filtering options for all apps.
 - Add notifications and reminders for schedules and incident reports.
@@ -72,6 +76,6 @@ This is a Django-based childcare management system that allows administrators to
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
-- This project is licensed under the MIT License. See the LICENSE file for more details.
+- This project is licensed under the MIT License.
 
 
