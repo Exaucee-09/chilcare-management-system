@@ -39,7 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'children',
-    'staff'
+    'parents',
+    'staff',
+    'users',
+    'attendance',
+    'incidentReport',
+    'schedule',
+    'classroom',
+    'dashboard',
 ]
 
 MIDDLEWARE = [
@@ -50,12 +57,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'children.middleware.AuthRequiredMiddleware',
-    'staff.middleware.AuthRequiredMiddleware',
+    'dashboard.middleware.DashboardMiddleware',  # Add this line
+
 ]
 
 LOGIN_URL = 'login'
-LOGIN_REDIRECT_URL = '/home/' # Redirect to 'home' after login
+LOGIN_REDIRECT_URL = '/dashboard/' # Redirect to 'dashboard' after login
 LOGOUT_REDIRECT_URL = 'login'  # Redirect to 'login' after logout
 
 SESSION_COOKIE_AGE= 86400
@@ -133,6 +140,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = 'media/'
+
+MEDIA_ROOT = BASE_DIR / 'media'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [
+    BASE_DIR /  'static'
+]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
